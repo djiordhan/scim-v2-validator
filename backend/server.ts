@@ -4,7 +4,7 @@ import path from 'path';
 import validateRouter from './routes/validate';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3100;
 const isProd = process.env.NODE_ENV === 'production';
 
 app.use(cors({ origin: isProd ? false : 'http://localhost:3001' }));

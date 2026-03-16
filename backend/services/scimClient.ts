@@ -26,8 +26,8 @@ export function createScimClient(config: ScimClientConfig): AxiosInstance {
     baseURL: config.baseUrl,
     headers: {
       Authorization: `Bearer ${config.token}`,
-      'Content-Type': 'application/scim+json',
-      Accept: 'application/scim+json',
+      'Content-Type': 'application/json',
+      Accept: 'application/scim+json, application/json',
       ...config.customHeaders,
     },
     timeout: 15000,
