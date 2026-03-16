@@ -63,7 +63,7 @@ export default function TestResultItem({ result }: Props) {
             </div>
           )}
 
-          {result.request && (
+          {result.request != null && (
             <div>
               <p className="text-xs font-semibold text-gray-400 mb-1">Request</p>
               <pre className="text-xs text-gray-300 bg-gray-800 rounded p-3 overflow-auto max-h-48 whitespace-pre-wrap">
@@ -72,7 +72,7 @@ export default function TestResultItem({ result }: Props) {
             </div>
           )}
 
-          {result.response && (
+          {result.response != null && (
             <div>
               <p className="text-xs font-semibold text-gray-400 mb-1">Response</p>
               <pre className="text-xs text-gray-300 bg-gray-800 rounded p-3 overflow-auto max-h-48 whitespace-pre-wrap">
