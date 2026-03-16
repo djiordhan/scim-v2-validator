@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import validateRouter from './routes/validate';
+import entraRouter from './routes/entra';
 
 const app = express();
 const PORT = process.env.PORT || 3100;
@@ -11,6 +12,7 @@ app.use(cors({ origin: isProd ? false : 'http://localhost:3001' }));
 app.use(express.json());
 
 app.use('/api', validateRouter);
+app.use('/api/entra', entraRouter);
 
 app.get('/health', (_req, res) => {
   res.json({ status: 'ok' });

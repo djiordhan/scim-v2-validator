@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "concurrently -n backend,frontend -c blue,green \"yarn workspace scim-validator-backend dev\" \"yarn workspace scim-validator-frontend dev\"",
     "build": "yarn workspace scim-validator-frontend build && yarn workspace scim-validator-backend build && node scripts/copy-static.js",
-    "start": "NODE_ENV=production node backend/dist/server.js"
+    "start": "cd backend && NODE_ENV=production node dist/server.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
